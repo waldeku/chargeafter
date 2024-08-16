@@ -16,6 +16,7 @@ const useGamePanel = (data: CountryDTO[]) => {
           value: countryName,
           selected: false,
           error: false,
+          disabled: false,
         },
         {
           id: Number(_.uniqueId()),
@@ -23,6 +24,7 @@ const useGamePanel = (data: CountryDTO[]) => {
           value: capital[0],
           selected: false,
           error: false,
+          disabled: false,
         },
       ];
     });

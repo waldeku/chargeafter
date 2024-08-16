@@ -1,5 +1,7 @@
 import { Button, ButtonProps } from "@radix-ui/themes";
 
+import "./ActionButton.css";
+
 type ActionButtonProps = ButtonProps & {
   text: string;
   isSelected?: boolean;
@@ -19,6 +21,7 @@ const ActionButton = ({
       variant={isSelected ? "solid" : "outline"}
       color={isError ? "red" : undefined}
       onClick={isError || isSelected ? undefined : onClick}
+      className="action-button"
     >
       {text}
     </Button>

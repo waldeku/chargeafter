@@ -1,0 +1,4 @@
+.action-button[data-accent-color="red"] {
+  background-color: red;
+  color: white;
+}

@@ -12,4 +12,5 @@ export type GameItem = {
   value: string;
   selected: boolean;
   error: boolean;
+  disabled: boolean;
 };

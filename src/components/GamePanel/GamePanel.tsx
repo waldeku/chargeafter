@@ -14,15 +14,18 @@ const GamePanel = ({ data }: GamePanelProps) => {
   const { handleNewGameButtonClick, handleGameButtonClick, gameItems } =
     useGamePanel(data);
 
-  const buttons = gameItems.map(({ value, id, error, selected, country }) => (
-    <ActionButton
-      key={id}
-      text={value}
-      onClick={() => handleGameButtonClick(id, country)}
-      isSelected={selected}
-      isError={error}
-    />
-  ));
+  const buttons = gameItems.map(
+    ({ value, id, error, selected, country, disabled }) => (
+      <ActionButton
+        key={id}
+        text={value}
+        onClick={() => handleGameButtonClick(id, country)}
+        isSelected={selected}
+        isError={error}
+        disabled={disabled}
+      />
+    )
+  );
 
   return (
     <Box width={{ sm: "100%", md: "80%", lg: "60%", xl: "40%" }}>
